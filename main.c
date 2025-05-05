@@ -59,7 +59,7 @@ int main() {
                     fclose(file);
                     printf("Item adicionado com sucesso!\n");
                 } else {
-                    printf("Erro\n");
+                    printf("Erro ao adicionar item.\n");
                 }
         
                 break;
@@ -115,6 +115,10 @@ int main() {
             case 4:
                 printf("Obrigado por usar o Controle de Estoques! Até a próxima.\n");
                 return 0;
+
+            default:
+                printf("Opção inválida! Tente novamente.\n");
+                break;
         }
 
         printf("Deseja realizar outra operação? (s/n)\n");
