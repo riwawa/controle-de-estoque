@@ -2,9 +2,9 @@
 #include <string.h>
 
 void indice() {
-    printf("================================");
-    printf("   Controle de Estoque");
-    printf("================================");
+    printf("================================\n");
+    printf("   Controle de Estoque\n");
+    printf("================================\n");
     printf("Selecione uma opção:\n");
     printf("1. Adicionar Item\n2. Remover Item\n3. Listar Estoque\n4. Sair\n");
     printf("Opção: ");
@@ -55,7 +55,7 @@ int main() {
 
                 FILE *file = fopen("estoque.txt", "a");
                 if (file != NULL) {
-                    fprintf(file, "%s %d\n", nome, quantidade);
+                    fprintf(file, "%s\n%d\n", nome, quantidade);
                     fclose(file);
                     printf("Item adicionado com sucesso!\n");
                 } else {
@@ -81,18 +81,18 @@ int main() {
                     if (strcmp(item.nome, nomeParaRemover) == 0) {
                         if (item.quantidade > quantidade) {
                             item.quantidade -= quantidade;
-                            fprintf(tempFILE, "%s %d\n", item.nome, item.quantidade);
+                            fprintf(tempFILE, "%s\n%d\n", item.nome, item.quantidade);
                             itemRemovido = 1;
                         } else if (item.quantidade == quantidade) {
                             printf("Item removido do estoque!\n");
                             removidoCompletamente = 1;
                             itemRemovido = 1;
                         } else {
-                            fprintf(tempFILE, "%s %d\n", item.nome, item.quantidade);
+                            fprintf(tempFILE, "%s\n%d\n", item.nome, item.quantidade);
                             printf("Quantidade insuficiente. Quantidade disponível: %d\n", item.quantidade);
                         } 
                     } else {
-                        fprintf(tempFILE, "%s %d\n", item.nome, item.quantidade);
+                        fprintf(tempFILE, "%s\n%d\n", item.nome, item.quantidade);
                     }
                 }
                 if (itemRemovido && !removidoCompletamente) {
