@@ -1,0 +1,2 @@
+# Controle de Estoques
+Este é um sistema de controle de estoques desenvolvido para automatizar o gerenciamento de produtos em estoque, permitindo adicionar, remover e consultar produtos, além de visualizar o status atual do inventário. O projeto foi criado com base no desafio de controle de estoques da NEPS.

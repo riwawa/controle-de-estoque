@@ -1,6 +1,2 @@
-Notebook
-10
-Caneta
-50
-Caderno
-25
+Caneta 50
+Notebook 25
